@@ -1,0 +1,459 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Jura', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+}
+
+body{
+    background-color: #005151;
+    height: 100%;
+    width: 100%;
+}
+
+input::-webkit-input-placeholder {color:#382c2c; }
+input::-moz-placeholder          {color:#382c2c; }/* Firefox 19+ */
+input:-moz-placeholder           {color:#382c2c; }/* Firefox 18- */
+input:-ms-input-placeholder      {color:#382c2c; }
+
+h3{
+    text-align: center;
+    font-size: 18px
+}
+
+button, input[type=submit]{
+    background-color: #262a33;
+    outline: none;
+    border: 2px solid rgb(171, 191, 201);
+    border-radius: 1px;
+    box-shadow: 0 0 0 60px rgba(0,0,0,0);
+    cursor: pointer;
+    margin: 0.5px;
+    padding: 2px;
+    height: 30px;
+  }
+input[type=submit]:active {
+    box-shadow: 0 0 40px rgba(0, 0, 0, .1) inset; 
+    opacity: 0.5;
+}
+input[type=text], input[type=number], input[type=password], select{
+    height: 25px;
+}
+button:active {
+      box-shadow: 0 0 40px rgba(0, 0, 0, .1) inset; 
+      opacity: 0.5;
+  }
+
+.userName{
+    margin-right: 20px; 
+    line-height: 40px;
+}
+i{
+    width: 50px;
+    margin: 2px;
+}
+.form input, select{
+    padding-left: 2%;
+}
+
+
+
+/* Левое статистическое меню */
+.lft-menu{
+    display: block;
+    background-color: #262a33;
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    box-shadow: 3px 3px 5px 1px #262a3391;
+}
+.lft-menu ul{
+    margin-top: 20px;
+}
+
+.lft-menu img{
+    display: block;
+    margin: 20px auto;
+}
+.lft-menu input{
+    width: 80%;
+    box-shadow: none;
+    padding-left: 5px;
+    box-shadow: inset 2px 2px 5px #2e252d83;
+}
+
+.lft-menu span{
+    width: 100%;
+    margin-bottom: 10px;
+    background: url("/view/userPage/img/arow.png") no-repeat center right 1px;    
+    cursor: pointer;
+    padding-right: 30px;
+
+}
+
+.lft-menu button{
+    width: 80%;
+    padding: 0 10px;
+    margin: 10px auto;
+}
+.lft-menu li{
+    padding: 4px;
+    width: 80%;
+    margin: 0 auto;
+    /* box-shadow: inset 2px 2px 5px #69556783, 1px 1px 5px #634f60; */
+    border-radius: 2px;
+    list-style: none;
+}
+.lft-menu li:hover{
+    background-color: rgb(52, 56, 64);
+}
+
+
+
+
+/* Раздел слайдера */
+
+.section-time{
+    opacity: 0.7;
+    margin-left: 15%;
+    display: flex;
+    height: 100px;
+    width: 85%;
+    padding: 15px 0;
+    justify-content: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.295);
+    z-index: 9999;
+}
+
+/* Главный контент */
+
+.section-content{
+    padding-top: 10px;
+    margin-left: 15%;
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+.section-content article{
+    width: 40%;
+    height: 77vh;
+    display: flex;
+    flex-direction: column;
+}
+.section-content article:first-child{
+    width: 28%;
+
+}
+.section-content article:last-child{
+    width: 28%;
+
+}
+.section-content article:first-child{
+    margin-left: 5px;
+}
+.section-content article:last-child{
+    margin-right: 30px;
+
+}
+.form, .listExp, .result, [id^=chart]{
+    box-shadow: 3px 3px 5px 1px rgb(51, 51, 51);
+}
+
+
+    /* Стилизация форм Общих расходов и Постоянных расходов */
+.form {
+    position: relative;
+    max-width: 99%;
+    margin: 5px;
+    background-color: #262a33;
+    /* box-shadow: inset 2px 2px 5px #2e252d83, 1px 1px 5px rgba(255, 255, 255, 0.651); */
+    border-radius: 2px;
+  }
+  .form-inner {padding: 5px;}
+  .form-inner button{
+      margin-left: 70%;
+      width: 29%;
+  }
+  .form-inner .wrap{
+      width: 80%;
+  }
+    input,
+    select {
+    background-color: rgb(0, 81, 81);
+    outline: none;
+    display: block;
+    margin: 10px 10px;
+    box-shadow: inset 2px 2px 5px #2e252d83;
+    border-width: 0;
+    border-radius: 5px;
+  }
+  .form-inner input{
+    width: 98%;
+  }
+  .form-inner select {
+    width:  100%;
+  }
+
+  .todo-item {
+    display: flex;
+    border-top: 1px solid rgba(0,0,0,.1);
+    /* background-color: #ad9999; */
+    transition: all .2s;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 0.2em;
+    align-items: center;
+}
+
+.todo-item.completed * {
+    color: rgb(85, 85, 85);
+}
+
+.todo-item .checkbox {
+    margin-right: .5rem;
+}
+
+.todo-item .title,
+.todo-item .titleSum,
+.todo-item .textfield,
+.todo-item .numfield {
+    margin-right: auto;
+}
+.todo-item .checkbox{
+    box-shadow: none;
+    cursor: pointer;
+}
+.todo-item.completed .title {
+    text-decoration: line-through;
+}
+.todo-item.completed .titleSum {
+    text-decoration: line-through;
+}
+
+.todo-item.editing .title {
+    display: none;
+}
+.todo-item.editing .titleSum {
+    display: none;
+}
+
+.todo-item .textfield {
+    width: 30%;
+    display: none;
+}
+
+.todo-item .numfield {
+    width: 30%;
+    display: none;
+}
+
+.todo-item.editing .textfield {
+    display: block;
+}
+.todo-item.editing .numfield {
+    display: block;
+}
+
+.todo-item button {
+    opacity: 0;
+    transition: all .2s;
+}
+
+.todo-item:hover button:not(.checkbox) {
+    opacity: 1;
+}
+
+.result{
+    margin: 5px;
+    height: 50px;
+    width: 100%;
+    background-color: #262a33;
+    display: flex;
+    align-items: center;
+
+}
+.result h3{
+    margin-left: 5px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.resultMonth{
+    flex-grow: 1;
+    margin-left: 10px;
+}
+.resultYear{
+    flex-grow: 1;
+}
+
+[id^=chart]{
+    margin-left: 1%;
+    padding: 1%;
+    width: 98%;
+    height: 50%;
+
+}
+
+
+
+.listExp{
+    margin: 5px;
+    background-color: #262a33;
+    /* box-shadow: inset 2px 2px 5px #2e252d83, 1px 1px 5px rgba(255, 255, 255, 0.651); */
+}
+
+.listExp table{
+    color: rgb(165, 165, 165);
+    margin-top: 40px;
+    width: 100%;
+}
+.listExp td{
+    padding-left: 10px;
+}
+.listExp tr:hover{
+    background-color: #005151;
+}
+.listExp th{
+    background-color: #005151;
+}
+
+.listExp table tr>th:first-child{
+    display: none;
+}	
+.listExp table tr>td:first-child{
+    display: none;
+}	
+.listExp table tr>td:last-child{
+    cursor: pointer;
+    opacity: 0;
+}
+.listExp table tr>td:last-child:hover{
+    opacity: 1;
+}
+.hide{
+ display: none;
+}
+
+.exit{
+    margin-right: 5px;
+    z-index: 100;
+}
+.cbalink{
+    display: none;
+}
+
+
+
+
+.section-header{
+    display: block;
+    background-color: #262a33;
+    margin-left: 15%;
+    height: 100px;
+    min-height: 7vh;
+    width: 85%;
+    box-shadow: 3px 3px 5px 1px #262a3391;
+    overflow: hidden;
+
+}
+
+
+
+
+canvas{ position: absolute;
+    left: 15%;
+    height: 100px;
+ }
+
+
+  #particles-js{ 
+    width: 85%;
+    margin-left: 15%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+
+    }
+            h1{
+              display: block;
+              position: relative;
+              right: 35%;
+              margin: 0;
+              padding: 0;
+              font-size: 5rem;
+              font-family: 'Anton', sans-serif;
+              color: rgba(255, 255, 255, 0.301);
+            }
+
+
+/* .invisible{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .invisible{
+        display: block;
+        width: 100%;
+
+    }
+    .section-header {
+        margin-left: 0px;
+        width: 100%;
+    }
+    .section-content {
+        margin-left: 38%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 62%;
+    }
+    .section-content article:first-child{
+        display: none;
+    }
+    .section-content article{
+        width: 99%;
+        height: 100%;
+    }
+    .section-content article:last-child {
+        width: 99%;
+    }
+    .section-time {
+        display: none;
+    }
+    .lft-menu{
+        padding-top: 15%;
+        width: 38%;
+        position: absolute;
+        display: block;
+    }
+    .lft-menu .form{
+        box-shadow: none;
+    }
+    .form-inner button {
+        margin-left: 5%;
+        width: 80%;
+    }
+    *{
+        font-size: 10px;
+    }
+    
+    h3{
+        font-size: 14px
+    }
+    .logo{
+        display: none;
+    }
+    .cour{
+        box-shadow: none;
+        width: 100%;
+    }
+    #particles-js{
+        display: none;
+    }
+} */

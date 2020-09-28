@@ -1,0 +1,203 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+
+body{
+    font-family: 'Rubik', sans-serif;
+    widows: 100vw;
+    height: 100vh;
+    background-color: #2c6882;
+    /* IE9, iOS 3.2+ */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIxMDAlIiBjeT0iMTAwJSIgcj0iMTAwJSI+PHN0b3Agc3RvcC1jb2xvcj0iI2FjY2RkNCIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuMDUyMDAwMDAwMDAwMDAwMDA1Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzA4N2I5NSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuMzQ5Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzExMTEzNSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuOTgzIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+    /* Android 2.3- hack (needed for the actual radial gradient) */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIxMDAlIiBjeT0iMTAwJSIgcj0iMTAwJSI+PHN0b3Agc3RvcC1jb2xvcj0iI2FjY2RkNCIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuMDUyMDAwMDAwMDAwMDAwMDA1Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzA4N2I5NSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuMzQ5Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzExMTEzNSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuOTgzIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+),
+        -webkit-gradient(radial, right bottom, 0, right bottom, 539,color-stop(0.052, rgb(0, 81, 81)),color-stop(#005151),color-stop(#262a33));
+    /* Android 2.3 */
+    background-image: -webkit-radial-gradient(right bottom, circle farthest-side,rgb(0, 81, 81) 5.2%, #005151, #262a33);
+    /* IE10+ */
+    background-image: radial-gradient(circle farthest-side at right bottom,rgb(0, 81, 81) 5.2%, #005151, #262a33);
+    background-image: -ms-radial-gradient(right bottom, circle farthest-side,rgb(0, 81, 81) 5.2%, #005151, #262a33);
+}
+        
+/* IE8- CSS hack */
+@media \0screen\,screen\9 {
+    .gradient {
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffaccdd4",endColorstr="#ff111135",GradientType=0);
+    }
+}
+     
+
+#range5 .login-wr {
+    position: relative;
+    margin: 0 auto;
+    max-width: 270px;
+    padding: 10% 15px 0 15px;
+}
+
+#range5 h2 {
+    font-weight: 200;
+    font-size: 1.6em;
+    text-align: center; 
+    margin: 0;
+    padding: 0;
+    color: #eee;
+}
+
+#range5 .form {
+    padding-top: 20px;
+    text-align: center;
+}
+
+#range5 input[type="text"], 
+#range5 input[type="email"],
+#range5 input[type="password"],
+#range5 button {
+    margin-bottom: 0px;
+    height: 40px;
+    outline: 0;
+    -moz-outline: none;
+}
+#range5 input[type="password"]{
+    margin-top: 16px;
+
+}
+
+
+#range5 input[type="text"] {
+    background: url("/view/headPage/img/iconfinder_Customers_657909.svg") no-repeat left 10px center;    
+}
+
+#range5 input[type="password"] {
+    background: url("/view/headPage/img/iconfinder_Programming_Development_keywords_1743798.svg") no-repeat left 10px center;    
+}
+#range5 input[type="email"] {
+    background: url("/view/headPage/img/iconfinder_Streamline-58_185078.svg") no-repeat left 10px center;    
+}
+
+#range5 input[type="text"],
+#range5 input[type="email"],
+#range5 input[type="password"] {
+    color: #eee;
+    width: calc(80% - 50px);
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 0 0 0 50px;
+    font-size: 14px;
+}
+
+#range5 input[type="text"]:focus,
+#range5 input[type="email"]:focus,
+#range5 input[type="password"]:focus {
+    border-bottom: 1px solid #ccc;
+    color: #eee;
+}  
+#range5 img{
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+} 
+
+#range5 a {
+    /* text-decoration: none; */
+    text-align: center;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    padding-bottom: 10px;
+}  
+#range5 i {
+    /* text-decoration: none; */
+    text-align: center;
+    font-size: 8px;
+    color: rgb(255, 255, 255);
+}  
+
+#range5 p{
+    color: rgb(78, 1, 1);
+    padding-bottom: 10px;
+}
+      
+#range5 button {
+    margin-top: 10px;
+    width: 80%;  
+    background: none;
+    border:none;
+    border: 1px solid #999;
+    color: white;
+    font-size: 18px;    
+    font-weight: 200;
+    cursor: pointer;
+    transition: box-shadow .4s ease;
+}
+
+#range5 *::-webkit-input-placeholder {
+    color: #242424;
+}
+
+#range5 *:-moz-placeholder {
+    color: #242424;
+}
+
+#range5 *::-moz-placeholder {
+    color: #242424;
+}
+
+#range5 *:-ms-input-placeholder {
+    color: #242424; 
+}
+
+.cbalink{
+    display: none;
+}

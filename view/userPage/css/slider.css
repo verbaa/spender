@@ -1,0 +1,99 @@
+.cour {
+  position: relative;
+  width: 450px;
+  border-radius: 2px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #262a33;
+  box-shadow: 3px 3px 5px 1px rgb(51, 51, 51);
+}
+
+.cour img {
+  border-radius: 15%;
+  width: 100px;
+  height: 75px;
+  display: block;
+}
+.cour i{
+  position: absolute;
+  top: 30px;
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: none;
+}
+
+.cour i:first-child{
+  background-color: transparent;
+  background-size: 100%;
+  background-image: url(/view/userPage/img/strelkaL.png);
+  opacity: 0.8;
+}
+.cour i:last-child{
+  background-color: transparent;
+  background-size: 100%;
+  background-image: url(/view/userPage/img/strelkaR.png);
+  opacity: 0.8;
+}
+.cour i:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.arrow:focus {
+  outline: none;
+}
+
+.prev {
+  left: 7px;
+}
+
+.next {
+  right: 7px;
+}
+
+.slider {
+  width: 312px;
+  overflow: hidden;
+}
+
+.slider ul {
+  width: 9999px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: margin-left 250ms;
+  font-size: 0;
+
+}
+
+.slider li {
+  border-radius: 5px;
+  padding: 2px;
+  display: inline-block;
+}
+.slider li:hover {
+  cursor: pointer;
+}
+
+.active {
+  background-color: rgb(244, 238, 252);
+  box-shadow: none;
+}
+
+/* .invisible{
+  display: none;
+}
+
+@media screen and (max-width: 768px){
+  .cour {
+    box-shadow: none;
+    width: 98%;
+    display: block;
+  }
+  .slider{
+    width: 252px;
+  }
+} */
